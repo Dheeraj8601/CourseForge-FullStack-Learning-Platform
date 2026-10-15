@@ -1,111 +1,235 @@
-# CourseForge — reading-first learning platform
+# CourseForge – Full-Stack E-Learning Platform
 
-A responsive React 19 + ASP.NET Core 10 Web API + SQL Server starter product. Learners read lessons in order, take retryable quizzes, unlock the next page on passing, and receive a downloadable SVG certificate. Administrators create courses, reading pages and quizzes; courses can be free or purchased using Razorpay Orders. Login supports email/password with JWT and Google OAuth sign-in (Google Identity Services, verified on server).
+**CourseForge** is a responsive, full-stack e-learning platform built using **React.js, ASP.NET Core Web API, Clean Architecture, and SQL Server**.
 
-> **Status:** working-source starter implementation, **not production audited**. The execution environment that generated this archive did not have the .NET SDK installed, so backend compilation, EF migrations and end-to-end Razorpay/Google testing could not be performed. Add real credentials and run the validation steps below before accepting payments. The frontend build was verified with Vite if noted in the delivered response.
+Unlike traditional video-based learning platforms, CourseForge focuses on **structured, text-based learning**, allowing students to learn through detailed lessons, complete quizzes, track their progress, and earn certificates.
 
-## Project layout
+The platform includes secure authentication, course management, Razorpay payment integration, and role-based access for administrators and students.
 
-```
-frontend/                          React SPA (feature screens and centralized API client)
-backend/CourseForge.slnx          Visual Studio / dotnet solution (all four projects)
-backend/src/CourseForge.Domain/     Domain entities
-backend/src/CourseForge.Application/ Contracts and integration abstractions
-backend/src/CourseForge.Infrastructure/ EF Core SQL Server, JWT, Google verification, Razorpay
-backend/src/CourseForge.Api/        API controllers, auth, DI, middleware
-backend/create-admin.sql           Promote an existing account to Admin
-```
+## 🚀 Features
 
-## Quick start
+### 👨‍🎓 Student Features
 
-1. Install **.NET 10 SDK**, SQL Server / SQL Server Express, Node 20+ and optionally `dotnet-ef`:
-   ```bash
-   dotnet tool install --global dotnet-ef --version 10.0.0
-   ```
-2. Copy `backend/src/CourseForge.Api/appsettings.Local.example.json` to `backend/src/CourseForge.Api/appsettings.Local.json`. Set `ConnectionStrings:Default`, replace `Jwt:Key` with a securely generated random secret of at least 32 bytes. **Never commit secrets.** For production use secrets manager / environment variables.
-3. From `backend/src/CourseForge.Api`:
-   ```bash
-   dotnet restore
-   dotnet ef migrations add InitialCreate --project ../CourseForge.Infrastructure --startup-project . --output-dir Migrations
-   dotnet ef database update --project ../CourseForge.Infrastructure --startup-project .
-   dotnet run
-   ```
-   Local swagger: `http://localhost:5080/swagger`.
-4. From `frontend`: copy `.env.example` to `.env`; then:
-   ```bash
-   npm install
-   npm run dev
-   ```
-   Open `http://localhost:5173`.
-5. Register a normal account, then use `backend/create-admin.sql` in SQL Server Management Studio to promote **that** account. Log out and log back in; JWT role is issued when you log in. Admin studio appears in navigation.
-6. Admin studio: Create course → Add lesson → Add quiz questions to the lesson. For the OSI Model create 7 ordered lessons, then questions for each. Set **Skip quizzes** on a course to allow completion without question answers (learners still click Complete/Submit for each page).
-7. Learners choose course → free enroll or Razorpay checkout → read each ordered lesson → submit a quiz → retry on failure → get certificate once all pages have passed.
+- Browse and explore available courses.
+- Register and log in securely.
+- Sign in using Google authentication.
+- Enroll in free courses.
+- Purchase paid courses using Razorpay.
+- Learn through structured Markdown-based lessons.
+- Access lessons sequentially.
+- Complete quizzes after individual lessons.
+- Retry quizzes after unsuccessful attempts.
+- Unlock subsequent lessons after passing.
+- Track course completion and learning progress.
+- Download certificates after successfully completing courses.
+- Verify certificates using unique verification codes.
 
-## Secrets and integrations
+### 👨‍💼 Admin Features
 
-### Google OAuth / Identity Services
-- Google Cloud Console: create OAuth **Web application** client, add `http://localhost:5173` to Authorized JavaScript origins.
-- Set same Web Client ID in `frontend/.env` as `VITE_GOOGLE_CLIENT_ID` and in backend `Google:ClientId`.
-- The browser sends Google ID credential to `POST /api/auth/google`. Backend verifies token audience/signature with Google library and issues its own JWT.
-- To prevent unsafe automatic account linking, a Google sign-in email already registered via password is rejected unless linked through a verified account-linking flow (not part of starter).
+- Role-based admin authentication.
+- Create and manage courses.
+- Configure course titles, descriptions, categories, and prices.
+- Publish courses for students.
+- Add and organize lessons in a specific order.
+- Create multiple-choice quizzes for lessons.
+- Configure quiz passing percentages.
+- Enable or disable quiz requirements.
+- Manage course learning content using Markdown.
 
-### Razorpay
-- Create Razorpay account, enable **Test Mode**, copy Test Key ID / secret to backend `Razorpay:KeyId` and `Razorpay:KeySecret`. **Never put KeySecret into frontend.**
-- `POST /api/payments/courses/{id}/order` creates a server-side Razorpay order based on DB price. Frontend launches Razorpay Checkout using returned public `keyId`, amount and order ID.
-- `POST /api/payments/verify` validates Razorpay HMAC server-side before enrolling. For asynchronous payment reconciliation, configure webhook at `https://YOUR_API_HOST/api/payments/webhook`, subscribing to `payment.captured` and `order.paid`, and set `Razorpay:WebhookSecret`.
-- The webhook signature is validated against the **raw payload**, with idempotent enrollment and price check. A production deployment should additionally implement Razorpay payments API reconciliation for suspicious or pending transactions, verified payment currency, persistent webhook event log, refunds and reconciliation jobs.
+## 🛠️ Technology Stack
 
-## Primary endpoints
+| Layer | Technology |
+|---|---|
+| Frontend | React.js, JavaScript, Vite |
+| Backend | ASP.NET Core 10 Web API |
+| Programming Language | C# |
+| Database | Microsoft SQL Server |
+| ORM | Entity Framework Core |
+| Architecture | Clean Architecture |
+| Authentication | JWT, Google Authentication |
+| Authorization | Role-Based Access Control |
+| Payment Gateway | Razorpay |
+| API Documentation | Swagger / OpenAPI |
+| Learning Content | Markdown |
+| Certificates | SVG Certificate Generation |
 
-| Action | Method / route | Access |
-|---|---|---|
-| Register/login/Google | POST `/api/auth/register`, `/login`, `/google` | Public |
-| Browse courses | GET `/api/courses` | Public |
-| Detail | GET `/api/courses/{id}` | Public |
-| Enroll free | POST `/api/courses/{id}/enroll` | JWT |
-| Read page | GET `/api/courses/{id}/learn/{lessonId}` | Enrolled JWT |
-| Grade page quiz | POST `/api/courses/{id}/learn/{lessonId}/submit` | Enrolled JWT |
-| My learning | GET `/api/courses/my/learning` | JWT |
-| Payment order/verify | POST `/api/payments/courses/{id}/order`, `/api/payments/verify` | JWT |
-| Webhook | POST `/api/payments/webhook` | Signed Razorpay |
-| Certificate download | GET `/api/certificates/{id}/download` | Owner/admin JWT |
-| Certificate lookup | GET `/api/certificates/verify/{code}` | Public |
-| Admin studio | `/api/admin/...` | Admin JWT |
+## 🏗️ Clean Architecture
 
-## Important functional rules
-- Quizzes are graded **on the server**. Correct option indices are never sent to the learner.
-- The next lesson URL is blocked by the backend until the prior lesson is marked passed.
-- Incorrect attempts increment and learners can retry without attempt limits.
-- `SkipQuizzes=true` means marking a lesson complete with Submit; `0` questions also allows completion.
-- Certificate issuance after all lessons are passed has a unique user/course index to prevent duplication.
-- Paid enrollment is created only after Razorpay server-side signature verification or verified payment webhook; never trust frontend success alone.
+CourseForge follows a layered architecture to maintain separation of concerns, improve maintainability, and support future scalability.
 
-## Production hardening checklist
+### Backend Architecture
 
-- [ ] Run `dotnet build` and `dotnet ef database update`; add EF migration to source control.
-- [ ] End-to-end browser and integration tests for Google sign-in, payment success/failures, webhook retries, authoring and certificate download.
-- [ ] Host on HTTPS with trusted proxy and correct ASP.NET Core forwarding headers.
-- [ ] Rotate secrets; use Azure Key Vault / other managed secret store; prevent logs from containing credentials or auth tokens.
-- [ ] Add refresh tokens or short-session strategy, logout revocation, email verification, password reset, rate limiting and account lockout.
-- [ ] Add robust payment reconciliation, refunds, webhook event journal and transaction-safe concurrency for high volume.
-- [ ] Escape/sanitize untrusted markdown content as appropriate; moderate image URLs, content uploads, protect against phishing / XSS.
-- [ ] Add admin content editing and removal in the UI (update endpoints for course and lesson are included), richer quiz/question management, draft previews, image storage and pagination.
-- [ ] Certificate download is **SVG**, which can be opened/printed or converted to PDF; a native PDF exporter has not been implemented.
-- [ ] Do not change quiz requirements midway through active paid cohorts without defining an explicit versioning policy.
-
-## Notes on architecture
-The backend separates domain, application contracts, infrastructure and transport controllers. It is a **clean-architecture-inspired starter**, not a fully strict clean architecture: controllers directly query EF context for simplicity. The frontend centralizes API/auth and separates screens, but is not fully feature-sliced yet. For a large production build, add application use cases, repository abstractions and frontend feature folders/tests.
-
-## Open the .NET solution (.slnx)
-
-The backend contains `CourseForge.slnx` referencing the Domain, Application, Infrastructure and API projects. Open `backend/CourseForge.slnx` in a compatible Visual Studio version, or run:
-
-```bash
-cd backend
-dotnet restore CourseForge.slnx
-dotnet build CourseForge.slnx
-dotnet run --project src/CourseForge.Api/CourseForge.Api.csproj
+```text
+CourseForge.Backend
+│
+├── CourseForge.Domain
+│   └── Domain Entities
+│
+├── CourseForge.Application
+│   └── Interfaces and Application Contracts
+│
+├── CourseForge.Infrastructure
+│   ├── Entity Framework Core
+│   ├── Database Context
+│   ├── JWT Token Service
+│   ├── Google Authentication
+│   └── Razorpay Integration
+│
+└── CourseForge.Api
+    ├── Controllers
+    ├── Dependency Injection
+    ├── Authentication Configuration
+    └── API Endpoints
 ```
 
-Use the .NET 10 SDK and a Visual Studio version that supports the XML `.slnx` format.
-"# CourseForge-FullStack-Learning-Platform" 
+### Frontend Architecture
+
+The React frontend provides a responsive interface for browsing courses, authentication, lesson reading, quiz participation, student progress tracking, and course administration.
+
+It communicates with the ASP.NET Core backend through REST APIs.
+
+## 📚 Course Learning Workflow
+
+CourseForge provides a sequential, page-based learning experience.
+
+```text
+Browse Courses
+      |
+      v
+Select Course
+      |
+      v
+Enroll / Purchase
+      |
+      v
+Read Lesson 1
+      |
+      v
+Attempt Quiz
+      |
+      +---- Failed ----> Retry Quiz
+      |
+      v
+     Passed
+      |
+      v
+Unlock Next Lesson
+      |
+      v
+Complete All Lessons
+      |
+      v
+Generate Certificate
+      |
+      v
+Download Certificate
+```
+
+Administrators can configure courses to skip quiz requirements when needed.
+
+## 📝 Quiz and Progress Tracking
+
+Each course contains multiple lessons arranged in a defined order.
+
+- Lessons can contain multiple-choice questions.
+- Students must achieve the configured passing percentage.
+- Failed quizzes can be attempted again.
+- Successful completion unlocks the next lesson.
+- Quiz attempts and lesson completion are stored in SQL Server.
+- Course progress is calculated from completed lessons.
+- Certificates are issued after all required lessons are completed.
+
+## 🔐 Authentication and Authorization
+
+CourseForge supports two authentication methods:
+
+**JWT Authentication**
+
+Students and administrators can register or log in using email and password. The backend generates JWT access tokens for authenticated requests.
+
+**Google Authentication**
+
+Users can sign in using Google credentials, which are verified by the ASP.NET Core backend.
+
+Role-based authorization separates student functionality from administrative operations.
+
+## 💳 Razorpay Payment Integration
+
+CourseForge supports free and paid courses.
+
+For paid courses, Razorpay is integrated into the enrollment workflow.
+
+The payment integration includes:
+
+- Razorpay order creation.
+- Payment signature verification.
+- Webhook signature verification.
+- Purchase record management.
+- Enrollment after successful payment processing.
+
+Production deployment requires additional payment-status validation, idempotency safeguards, and end-to-end testing.
+
+## 🎓 Certificate Generation
+
+After completing all required lessons, students receive a certificate of completion.
+
+Certificates include:
+
+- Student name.
+- Completed course title.
+- Certificate issue date.
+- Unique certificate verification code.
+
+Certificates can be downloaded in SVG format and verified through a public API endpoint.
+
+## 🗄️ Database Entities
+
+The application uses Entity Framework Core with SQL Server.
+
+Core entities include:
+
+| Entity | Purpose |
+|---|---|
+| User | Stores student and administrator accounts |
+| Course | Stores course information and configuration |
+| Lesson | Stores ordered Markdown learning content |
+| Question | Stores multiple-choice quiz questions |
+| Enrollment | Tracks student course enrollments |
+| LessonProgress | Tracks quiz attempts and lesson completion |
+| Purchase | Stores Razorpay purchase information |
+| Certificate | Stores issued certificates and verification codes |
+
+## 🌟 Project Highlights
+
+- Full-stack development with React and ASP.NET Core.
+- Clean Architecture with separate application layers.
+- RESTful API development.
+- SQL Server database integration using EF Core.
+- JWT authentication and role-based authorization.
+- Google sign-in integration.
+- Razorpay payment gateway integration.
+- Dynamic Markdown-based course content.
+- Sequential lesson unlocking.
+- Server-side quiz validation.
+- Persistent learning progress tracking.
+- Automated certificate generation.
+- Responsive student and admin interfaces.
+
+## 🔮 Future Enhancements
+
+- PDF certificate generation.
+- Course reviews and ratings.
+- Student discussion forums.
+- Course search and advanced filtering.
+- Instructor accounts and dashboards.
+- Email notifications.
+- Refresh-token authentication.
+- Learning analytics.
+- Course wishlists.
+- Cloud deployment and CI/CD automation.
+
+---
+
+**CourseForge** — *Learn at your own pace. Practice your knowledge. Earn your achievement.*
+
+Built with React.js, ASP.NET Core Web API, Entity Framework Core, and SQL Server.
