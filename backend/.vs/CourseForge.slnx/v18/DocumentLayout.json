@@ -1,0 +1,228 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\P2\\courseforge\\backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E42FA104-C566-A60E-A73A-2D7CA768CC57}|src\\CourseForge.Infrastructure\\CourseForge.Infrastructure.csproj|c:\\p2\\courseforge\\backend\\src\\courseforge.infrastructure\\integrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E42FA104-C566-A60E-A73A-2D7CA768CC57}|src\\CourseForge.Infrastructure\\CourseForge.Infrastructure.csproj|solutionrelative:src\\courseforge.infrastructure\\integrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E42FA104-C566-A60E-A73A-2D7CA768CC57}|src\\CourseForge.Infrastructure\\CourseForge.Infrastructure.csproj|c:\\p2\\courseforge\\backend\\src\\courseforge.infrastructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E42FA104-C566-A60E-A73A-2D7CA768CC57}|src\\CourseForge.Infrastructure\\CourseForge.Infrastructure.csproj|solutionrelative:src\\courseforge.infrastructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05CA73FC-6A92-181E-1AD1-699C370EA92C}|src\\CourseForge.Application\\CourseForge.Application.csproj|c:\\p2\\courseforge\\backend\\src\\courseforge.application\\contracts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05CA73FC-6A92-181E-1AD1-699C370EA92C}|src\\CourseForge.Application\\CourseForge.Application.csproj|solutionrelative:src\\courseforge.application\\contracts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0802D516-5D8D-79E9-411C-6F6AF66E83E2}|src\\CourseForge.Domain\\CourseForge.Domain.csproj|c:\\p2\\courseforge\\backend\\src\\courseforge.domain\\entities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0802D516-5D8D-79E9-411C-6F6AF66E83E2}|src\\CourseForge.Domain\\CourseForge.Domain.csproj|solutionrelative:src\\courseforge.domain\\entities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA63CCE6-692C-6BA9-7D31-F41F06D43A14}|src\\CourseForge.Api\\CourseForge.Api.csproj|c:\\p2\\courseforge\\backend\\src\\courseforge.api\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA63CCE6-692C-6BA9-7D31-F41F06D43A14}|src\\CourseForge.Api\\CourseForge.Api.csproj|solutionrelative:src\\courseforge.api\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA63CCE6-692C-6BA9-7D31-F41F06D43A14}|src\\CourseForge.Api\\CourseForge.Api.csproj|c:\\p2\\courseforge\\backend\\src\\courseforge.api\\controllers\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA63CCE6-692C-6BA9-7D31-F41F06D43A14}|src\\CourseForge.Api\\CourseForge.Api.csproj|solutionrelative:src\\courseforge.api\\controllers\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA63CCE6-692C-6BA9-7D31-F41F06D43A14}|src\\CourseForge.Api\\CourseForge.Api.csproj|c:\\p2\\courseforge\\backend\\src\\courseforge.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA63CCE6-692C-6BA9-7D31-F41F06D43A14}|src\\CourseForge.Api\\CourseForge.Api.csproj|solutionrelative:src\\courseforge.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA63CCE6-692C-6BA9-7D31-F41F06D43A14}|src\\CourseForge.Api\\CourseForge.Api.csproj|c:\\p2\\courseforge\\backend\\src\\courseforge.api\\controllers\\certificatescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA63CCE6-692C-6BA9-7D31-F41F06D43A14}|src\\CourseForge.Api\\CourseForge.Api.csproj|solutionrelative:src\\courseforge.api\\controllers\\certificatescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA63CCE6-692C-6BA9-7D31-F41F06D43A14}|src\\CourseForge.Api\\CourseForge.Api.csproj|c:\\p2\\courseforge\\backend\\src\\courseforge.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA63CCE6-692C-6BA9-7D31-F41F06D43A14}|src\\CourseForge.Api\\CourseForge.Api.csproj|solutionrelative:src\\courseforge.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA63CCE6-692C-6BA9-7D31-F41F06D43A14}|src\\CourseForge.Api\\CourseForge.Api.csproj|c:\\p2\\courseforge\\backend\\src\\courseforge.api\\appsettings.local.example.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BA63CCE6-692C-6BA9-7D31-F41F06D43A14}|src\\CourseForge.Api\\CourseForge.Api.csproj|solutionrelative:src\\courseforge.api\\appsettings.local.example.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA63CCE6-692C-6BA9-7D31-F41F06D43A14}|src\\CourseForge.Api\\CourseForge.Api.csproj|c:\\p2\\courseforge\\backend\\src\\courseforge.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BA63CCE6-692C-6BA9-7D31-F41F06D43A14}|src\\CourseForge.Api\\CourseForge.Api.csproj|solutionrelative:src\\courseforge.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA63CCE6-692C-6BA9-7D31-F41F06D43A14}|src\\CourseForge.Api\\CourseForge.Api.csproj|c:\\p2\\courseforge\\backend\\src\\courseforge.api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA63CCE6-692C-6BA9-7D31-F41F06D43A14}|src\\CourseForge.Api\\CourseForge.Api.csproj|solutionrelative:src\\courseforge.api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Integrations.cs",
+              "DocumentMoniker": "C:\\P2\\courseforge\\backend\\src\\CourseForge.Infrastructure\\Integrations.cs",
+              "RelativeDocumentMoniker": "src\\CourseForge.Infrastructure\\Integrations.cs",
+              "ToolTip": "C:\\P2\\courseforge\\backend\\src\\CourseForge.Infrastructure\\Integrations.cs",
+              "RelativeToolTip": "src\\CourseForge.Infrastructure\\Integrations.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAgwAMBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T10:41:48.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\P2\\courseforge\\backend\\src\\CourseForge.Infrastructure\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "src\\CourseForge.Infrastructure\\AppDbContext.cs",
+              "ToolTip": "C:\\P2\\courseforge\\backend\\src\\CourseForge.Infrastructure\\AppDbContext.cs",
+              "RelativeToolTip": "src\\CourseForge.Infrastructure\\AppDbContext.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAIwHIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T10:41:10.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Entities.cs",
+              "DocumentMoniker": "C:\\P2\\courseforge\\backend\\src\\CourseForge.Domain\\Entities.cs",
+              "RelativeDocumentMoniker": "src\\CourseForge.Domain\\Entities.cs",
+              "ToolTip": "C:\\P2\\courseforge\\backend\\src\\CourseForge.Domain\\Entities.cs",
+              "RelativeToolTip": "src\\CourseForge.Domain\\Entities.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T10:40:10.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Contracts.cs",
+              "DocumentMoniker": "C:\\P2\\courseforge\\backend\\src\\CourseForge.Application\\Contracts.cs",
+              "RelativeDocumentMoniker": "src\\CourseForge.Application\\Contracts.cs",
+              "ToolTip": "C:\\P2\\courseforge\\backend\\src\\CourseForge.Application\\Contracts.cs",
+              "RelativeToolTip": "src\\CourseForge.Application\\Contracts.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T10:39:56.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PaymentsController.cs",
+              "DocumentMoniker": "C:\\P2\\courseforge\\backend\\src\\CourseForge.Api\\Controllers\\PaymentsController.cs",
+              "RelativeDocumentMoniker": "src\\CourseForge.Api\\Controllers\\PaymentsController.cs",
+              "ToolTip": "C:\\P2\\courseforge\\backend\\src\\CourseForge.Api\\Controllers\\PaymentsController.cs",
+              "RelativeToolTip": "src\\CourseForge.Api\\Controllers\\PaymentsController.cs",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAmwPYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T10:38:49.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CoursesController.cs",
+              "DocumentMoniker": "C:\\P2\\courseforge\\backend\\src\\CourseForge.Api\\Controllers\\CoursesController.cs",
+              "RelativeDocumentMoniker": "src\\CourseForge.Api\\Controllers\\CoursesController.cs",
+              "ToolTip": "C:\\P2\\courseforge\\backend\\src\\CourseForge.Api\\Controllers\\CoursesController.cs",
+              "RelativeToolTip": "src\\CourseForge.Api\\Controllers\\CoursesController.cs",
+              "ViewState": "AgIAAJwBAAAAAAAAAAAAAA4AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T10:38:41.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CertificatesController.cs",
+              "DocumentMoniker": "C:\\P2\\courseforge\\backend\\src\\CourseForge.Api\\Controllers\\CertificatesController.cs",
+              "RelativeDocumentMoniker": "src\\CourseForge.Api\\Controllers\\CertificatesController.cs",
+              "ToolTip": "C:\\P2\\courseforge\\backend\\src\\CourseForge.Api\\Controllers\\CertificatesController.cs",
+              "RelativeToolTip": "src\\CourseForge.Api\\Controllers\\CertificatesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T10:33:48.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\P2\\courseforge\\backend\\src\\CourseForge.Api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "src\\CourseForge.Api\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\P2\\courseforge\\backend\\src\\CourseForge.Api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "src\\CourseForge.Api\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAcwI4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T10:21:12.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\P2\\courseforge\\backend\\src\\CourseForge.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\CourseForge.Api\\appsettings.json",
+              "ToolTip": "C:\\P2\\courseforge\\backend\\src\\CourseForge.Api\\appsettings.json",
+              "RelativeToolTip": "src\\CourseForge.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-15T09:33:42.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.Local.example.json",
+              "DocumentMoniker": "C:\\P2\\courseforge\\backend\\src\\CourseForge.Api\\appsettings.Local.example.json",
+              "RelativeDocumentMoniker": "src\\CourseForge.Api\\appsettings.Local.example.json",
+              "ToolTip": "C:\\P2\\courseforge\\backend\\src\\CourseForge.Api\\appsettings.Local.example.json",
+              "RelativeToolTip": "src\\CourseForge.Api\\appsettings.Local.example.json",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwA4AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-15T09:33:37.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\P2\\courseforge\\backend\\src\\CourseForge.Api\\Program.cs",
+              "RelativeDocumentMoniker": "src\\CourseForge.Api\\Program.cs",
+              "ToolTip": "C:\\P2\\courseforge\\backend\\src\\CourseForge.Api\\Program.cs",
+              "RelativeToolTip": "src\\CourseForge.Api\\Program.cs",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAcwKYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T09:31:16.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\P2\\courseforge\\backend\\src\\CourseForge.Api\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "src\\CourseForge.Api\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\P2\\courseforge\\backend\\src\\CourseForge.Api\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "src\\CourseForge.Api\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAswJEAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T09:24:06.325Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/CourseForge.Domain/CourseForge.Domain.csproj" />
+    <Project Path="src/CourseForge.Application/CourseForge.Application.csproj" />
+    <Project Path="src/CourseForge.Infrastructure/CourseForge.Infrastructure.csproj" />
+    <Project Path="src/CourseForge.Api/CourseForge.Api.csproj" />
+  </Folder>
+</Solution>

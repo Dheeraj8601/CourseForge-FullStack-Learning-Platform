@@ -1,0 +1,2 @@
+@host = http://localhost:5080
+GET {{host}}/api/courses

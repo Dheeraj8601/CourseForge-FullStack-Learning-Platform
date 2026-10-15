@@ -1,0 +1,7 @@
+**/node_modules/
+**/bin/
+**/obj/
+**/dist/
+**/appsettings.Local.json
+**/.env
+**/.env.local
